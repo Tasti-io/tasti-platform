@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tasti-black: #0a0a0a;
+  --tasti-teal: #00d4b8;
+  --tasti-border: #2a2a2a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #404040; }
+
+@layer components {
+  .tasti-card {
+    @apply bg-[#1c1c1c] border border-[#2a2a2a] rounded-2xl;
+  }
+  .tasti-btn-primary {
+    @apply bg-[#00d4b8] text-black font-semibold px-5 py-2.5 rounded-xl 
+           hover:bg-[#00b89f] transition-all duration-200 text-sm;
+  }
+  .tasti-btn-ghost {
+    @apply bg-transparent text-[#a3a3a3] hover:text-white hover:bg-[#1c1c1c] 
+           px-4 py-2 rounded-xl transition-all duration-200 text-sm;
+  }
+  .tasti-input {
+    @apply bg-[#1c1c1c] border border-[#2a2a2a] text-white placeholder-[#737373]
+           rounded-xl px-4 py-3 text-sm outline-none focus:border-[#00d4b8] 
+           focus:ring-1 focus:ring-[#00d4b8] transition-all w-full;
+  }
+  .stat-up { @apply text-[#22c55e]; }
+  .stat-down { @apply text-[#ef4444]; }
+  .badge { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium; }
+}
