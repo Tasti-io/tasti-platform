@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tasti.io â Client Onboarding</title>
+  <title>Tasti.io &mdash; Client Onboarding</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     /* ============================================================
-       TASTI.IO ONBOARDING â CONFIG
+       TASTI.IO ONBOARDING &mdash; CONFIG
        ============================================================
        Edit these CSS variables to match your brand at any time.
     */
@@ -22,9 +22,9 @@
       --color-text:        #FAFAFA;
       --color-text-2:      #A1A1AA;
       --color-text-3:      #71717A;
-      --color-accent:      #FF5A1F;
-      --color-accent-2:    #FF8C42;
-      --color-accent-glow: rgba(255,90,31,0.18);
+      --color-accent:      #00C4B4;
+      --color-accent-2:    #00D9C8;
+      --color-accent-glow: rgba(0,196,180,0.12);
       --color-success:     #34D399;
       --color-card-hover:  #1C1C1F;
       --radius:            14px;
@@ -185,7 +185,7 @@
       color: #000;
     }
     .step-item.done .step-num::after {
-      content: 'â';
+      content: '\2713';
       font-size: 10px;
       font-weight: 700;
     }
@@ -240,7 +240,7 @@
       margin-bottom: 28px;
       letter-spacing: 0.01em;
     }
-    .badge::before { content: 'â'; font-size: 8px; color: var(--color-success); }
+    .badge::before { content: '\25CF'; font-size: 8px; color: var(--color-success); }
     .hero__title {
       font-size: clamp(36px, 6vw, 60px);
       font-weight: 800;
@@ -510,7 +510,7 @@
       line-height: 1.5;
     }
     .pkg-features li::before {
-      content: 'â';
+      content: '\2713';
       color: var(--color-success);
       font-weight: 700;
       font-size: 12px;
@@ -1005,7 +1005,7 @@
       color: var(--color-text-3);
     }
     .trust-item::before {
-      content: 'â';
+      content: '\2713';
       color: var(--color-success);
       font-size: 11px;
       font-weight: 700;
@@ -1100,7 +1100,7 @@
 <body>
 
 <!-- ============================================================
-     JAVASCRIPT CONFIG â Edit this section for your setup
+     JAVASCRIPT CONFIG &mdash; Edit this section for your setup
      ============================================================ -->
 <script>
 const CONFIG = {
@@ -1117,7 +1117,7 @@ const CONFIG = {
   packages: [
     {
       id:         "starter",
-      icon:       "ð±",
+      icon:       "\u{1F4F1}",
       name:       "Month to Month",
       subtitle:   "Meta Management",
       desc:       "Facebook & Instagram account management, audience optimization, creative feedback & monthly performance reporting. Cancel anytime.",
@@ -1136,7 +1136,7 @@ const CONFIG = {
     },
     {
       id:         "pro",
-      icon:       "ð",
+      icon:       "\u{1F680}",
       name:       "Meta Management",
       subtitle:   "+ Ad Campaigns",
       desc:       "Full-service Meta management: campaign creation, A/B testing, creative production, audience scaling & detailed monthly analytics.",
@@ -1158,13 +1158,16 @@ const CONFIG = {
 </script>
 
 <!-- ================================================================
-     SHARED NAV â injected dynamically
+     SHARED NAV &mdash; injected dynamically
      ================================================================ -->
 <template id="tpl-nav">
   <nav class="nav">
     <div class="container nav__inner">
       <a href="#" class="logo" onclick="goToPage('intro'); return false;">
-        <div class="logo__icon">T</div>
+        <svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Tasti.io">
+          <path d="M73 22 A36 36 0 1 1 27 22" stroke="currentColor" stroke-width="13" stroke-linecap="round"/>
+          <circle cx="73" cy="22" r="9" fill="#00C4B4"/>
+        </svg>
         <span>Tasti.io</span>
       </a>
       <div class="nav__help">Need help? <a id="nav-email" href="#">hello@tasti.io</a></div>
@@ -1176,12 +1179,15 @@ const CONFIG = {
 </template>
 
 <!-- ================================================================
-     PAGE 0 â INTRO
+     PAGE 0 &mdash; INTRO
      ================================================================ -->
 <div class="page active" id="page-intro">
   <nav class="nav">
     <div class="container nav__inner">
-      <div class="logo"><div class="logo__icon">T</div><span>Tasti.io</span></div>
+      <div class="logo"><svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Tasti.io">
+          <path d="M73 22 A36 36 0 1 1 27 22" stroke="currentColor" stroke-width="13" stroke-linecap="round"/>
+          <circle cx="73" cy="22" r="9" fill="#00C4B4"/>
+        </svg><span>Tasti.io</span></div>
       <div class="nav__help">Questions? <a href="mailto:hello@tasti.io">hello@tasti.io</a></div>
     </div>
   </nav>
@@ -1193,14 +1199,14 @@ const CONFIG = {
         Let's grow your<br><span>restaurant together.</span>
       </h1>
       <p class="hero__sub">
-        Welcome to Tasti.io. This short onboarding takes about 5 minutes â you'll choose your plan, review our agreement, and get set up so we can start working for you right away.
+        Welcome to Tasti.io. This short onboarding takes about 5 minutes &mdash; you'll choose your plan, review our agreement, and get set up so we can start working for you right away.
       </p>
       <div class="hero__cta">
         <button class="btn btn--primary btn--lg" onclick="goToPage('packages')">
           Get Started
           <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
         </button>
-        <span style="font-size:12px;color:var(--color-text-3);">Takes about 5 minutes Â· No payment info needed yet</span>
+        <span style="font-size:12px;color:var(--color-text-3);">Takes about 5 minutes &middot; No payment info needed yet</span>
       </div>
       <div class="hero__steps">
         <div class="hero__step"><div class="hero__step-dot"></div> Choose your plan</div>
@@ -1214,7 +1220,7 @@ const CONFIG = {
 </div>
 
 <!-- ================================================================
-     PAGE 1 â CHOOSE PACKAGE
+     PAGE 1 &mdash; CHOOSE PACKAGE
      ================================================================ -->
 <div class="page" id="page-packages">
   <div id="nav-packages"></div>
@@ -1231,7 +1237,7 @@ const CONFIG = {
 </div>
 
 <!-- ================================================================
-     PAGE 2 â SERVICE AGREEMENT
+     PAGE 2 &mdash; SERVICE AGREEMENT
      ================================================================ -->
 <div class="page" id="page-agreement">
   <div id="nav-agreement"></div>
@@ -1246,7 +1252,7 @@ const CONFIG = {
       <div class="agreement-box">
         <div class="agreement-header">
           <div class="agreement-header__title">
-            <div class="doc-icon">ð</div>
+            <div class="doc-icon">&#128196;</div>
             Tasti.io Service Agreement
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
@@ -1256,62 +1262,85 @@ const CONFIG = {
         </div>
 
         <div class="agreement-scroll" id="agreement-scroll">
-          <!-- ââ AGREEMENT CONTENT ââââââââââââââââââââââââââââââââââ
-               Replace this content with your actual service agreement.
-               You can also embed a PDF here using an <iframe> or load
-               from an external source via fetch().
-               ââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+          <!-- Plan summary injected by JS -->
+          <div id="agreement-plan-summary" style="background:rgba(0,196,180,0.07);border:1px solid rgba(0,196,180,0.2);border-radius:10px;padding:18px 20px;margin-bottom:28px;">
+            <div style="font-size:11px;color:#00C4B4;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;">Selected Plan</div>
+            <div id="agreement-plan-name" style="font-size:17px;font-weight:700;color:#FAFAFA;"></div>
+            <div id="agreement-plan-price" style="font-size:14px;color:#A1A1AA;margin-top:2px;"></div>
+          </div>
 
-          <h2>1. Parties & Services</h2>
-          <p>This Service Agreement ("Agreement") is entered into between <strong>Tasti.io</strong> ("Agency") and the client ("Client") who signs below. By signing this Agreement, the Client engages the Agency to provide social media marketing services as described in the selected service package.</p>
+          <p style="color:var(--color-text-2);font-size:14px;line-height:1.7;margin-bottom:24px;">This agreement sets out how we work together. It&#39;s designed to be simple, fair, and easy to understand &mdash; no legal maze, just a clear picture of what to expect from both sides.</p>
 
-          <h2>2. Scope of Services</h2>
-          <p>The Agency will provide the services outlined in the selected package, which may include Facebook & Instagram account management, audience targeting and optimization, creative feedback, ad campaign management, performance reporting, and related services. Specific deliverables are detailed in the package selected by the Client.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--color-border);border-radius:8px;overflow:hidden;margin-bottom:28px;">
+            <div style="background:var(--color-surface-2);padding:14px 16px;">
+              <div style="font-size:11px;color:var(--color-text-3);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px;">Service Provider</div>
+              <div style="font-weight:700;color:var(--color-text);">Tasti.io</div>
+              <div style="color:var(--color-accent);font-size:13px;">hello@tasti.io</div>
+            </div>
+            <div style="background:var(--color-surface-2);padding:14px 16px;">
+              <div style="font-size:11px;color:var(--color-text-3);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px;">Client</div>
+              <div style="color:var(--color-text-2);font-size:13px;">Restaurant / Business Name (as signed below)</div>
+            </div>
+          </div>
 
-          <h2>3. Term & Cancellation</h2>
-          <p>This Agreement begins on the date of the first payment and continues on a month-to-month basis unless a fixed-term package is selected. Either party may cancel by providing 30 days written notice via email. The Client's data and account access will be returned within 7 days of cancellation.</p>
+          <h2>01 &mdash; Scope of Work</h2>
+          <p>Here&#39;s exactly what&#39;s included in your monthly plan:</p>
+          <ul id="agreement-scope-list">
+            <li>Content creation &mdash; photos, short videos, and captions tailored to your brand and cuisine</li>
+            <li>Post scheduling &mdash; consistent, well-timed publishing to maximise reach and engagement</li>
+            <li>Instagram strategy &mdash; hashtag research, bio optimisation, and content calendar planning</li>
+            <li>Stories management &mdash; behind-the-scenes moments, promos, and interactive elements</li>
+            <li>Community engagement &mdash; responses to comments and DMs</li>
+          </ul>
+          <p style="color:var(--color-text-3);font-size:13px;margin-top:10px;">Anything outside this scope &mdash; photography shoots on-site, full account rebrand &mdash; can be discussed separately.</p>
 
-          <h2>4. Payment Terms</h2>
-          <p>The Client agrees to pay the monthly fee for the selected package. Payments are processed automatically via Stripe on the same day each month. All fees are in USD. In the event of non-payment, services may be paused after 7 days and terminated after 14 days.</p>
-
-          <h2>5. Client Responsibilities</h2>
-          <p>The Client agrees to:</p>
+          <h2>02 &mdash; Payment</h2>
           <ul>
-            <li>Grant necessary access to Meta Business Manager as outlined in the onboarding instructions</li>
-            <li>Provide creative assets and brand guidelines when requested</li>
-            <li>Respond to communications within 3 business days</li>
-            <li>Ensure account compliance with Meta's advertising policies</li>
+            <li>Monthly subscription &mdash; billed at the start of each cycle</li>
+            <li>Payment is due upfront before work begins for that month</li>
+            <li>No refunds once the billing cycle has started &mdash; if you cancel mid-month, service continues through the end of the paid period</li>
+            <li>Accepted payment methods: card via Stripe</li>
           </ul>
 
-          <h2>6. Intellectual Property</h2>
-          <p>All creative work produced by the Agency remains the property of the Agency until full payment is received. Upon payment, the Client receives a perpetual license to use all delivered creative assets. The Agency retains the right to use campaign results and anonymized data for portfolio and case study purposes unless the Client requests otherwise in writing.</p>
+          <h2>03 &mdash; Term &amp; Cancellation</h2>
+          <ul>
+            <li>This is a month-to-month agreement &mdash; no long-term lock-in</li>
+            <li>Either party can cancel by giving 7 days&#39; written notice before the next billing date</li>
+            <li>Notice can be sent via email to <a href="mailto:hello@tasti.io" style="color:var(--color-accent);">hello@tasti.io</a></li>
+            <li>After cancellation, all content created during the engagement remains yours to keep</li>
+          </ul>
 
-          <h2>7. Confidentiality</h2>
-          <p>Both parties agree to keep confidential all non-public information shared during the engagement. This includes business data, advertising strategies, customer lists, and campaign performance metrics.</p>
+          <h2>04 &mdash; Your Responsibilities</h2>
+          <p>To help us do our best work, we ask that you:</p>
+          <ul>
+            <li>Grant us access to your Instagram account and/or Meta Business Suite (Editor role is preferred)</li>
+            <li>Provide any brand assets &mdash; logo, photos, videos, menu &mdash; in a timely manner</li>
+            <li>Review and approve content within the agreed timeframe (typically 48 hours); delays may affect the posting schedule</li>
+            <li>Keep us in the loop about upcoming events, specials, or changes to your menu</li>
+          </ul>
 
-          <h2>8. Results & Disclaimers</h2>
-          <p>The Agency will apply best practices and expertise to achieve the Client's marketing objectives; however, specific results cannot be guaranteed. Meta platform changes, ad auction dynamics, and other external factors may affect campaign performance.</p>
+          <h2>05 &mdash; Content &amp; Approvals</h2>
+          <ul>
+            <li>By default, we&#39;ll send content for your review before publishing</li>
+            <li>If you prefer auto-publishing (pre-approved content goes live without your sign-off each time), we&#39;re happy to work that way &mdash; just let us know</li>
+            <li>You retain ownership of all content we create for your brand</li>
+            <li>We may use anonymised examples of our work in our portfolio unless you ask us not to</li>
+          </ul>
 
-          <h2>9. Limitation of Liability</h2>
-          <p>The Agency's total liability shall not exceed the fees paid by the Client in the three months preceding any claim. The Agency is not liable for indirect, incidental, or consequential damages arising from the services.</p>
-
-          <h2>10. Governing Law</h2>
-          <p>This Agreement is governed by the laws of the applicable jurisdiction. Any disputes shall be resolved through binding arbitration before resorting to litigation.</p>
-
-          <h2>11. Entire Agreement</h2>
-          <p>This Agreement constitutes the entire understanding between the parties and supersedes all prior communications. Amendments must be made in writing and signed by both parties.</p>
-
-          <p style="margin-top:24px;color:var(--color-text-3);font-size:12px;">
-            <!-- PLACEHOLDER: Replace this section with your actual full agreement text.
-                 You may also embed a PDF via: <iframe src="/agreement.pdf" ...></iframe> -->
-            â ï¸ <em>Replace this text with your full legal service agreement.</em>
-          </p>
-        </div>
+          <h2>06 &mdash; A Note on Liability</h2>
+          <p>We take our work seriously and always aim for great results. That said, a few things are outside our control:</p>
+          <ul>
+            <li>We&#39;re not responsible for changes to Instagram&#39;s algorithm, platform outages, or account restrictions imposed by Meta</li>
+            <li>We can&#39;t guarantee specific follower counts or engagement numbers &mdash; social media results depend on many factors</li>
+            <li>We&#39;re not liable for any indirect losses related to your social media performance</li>
+          </ul>
+          <p style="color:var(--color-text-3);font-size:13px;margin-top:10px;">If something ever goes wrong on our end, we&#39;ll always communicate openly and work to make it right.</p>
+                </div>
 
         <div class="agreement-footer">
           <div class="sign-fields">
             <div class="field">
-              <label>Your Full Name (</label>
+              <label>Your Full Name *</label>
               <input type="text" id="sign-name" placeholder="Jane Smith" autocomplete="name" />
             </div>
             <div class="field">
@@ -1354,11 +1383,11 @@ const CONFIG = {
   <div class="page-actions">
     <div class="page-actions__inner">
       <div class="page-actions__left">
-        <button class="btn btn--secondary" onclick="goToPage('packages')">â Back</button>
+        <button class="btn btn--secondary" onclick="goToPage('packages')">&larr; Back</button>
       </div>
       <div class="page-actions__right">
         <button class="btn btn--primary" id="btn-proceed-payment" onclick="proceedToPayment()">
-          Confirm & Proceed to Payment â
+          Confirm & Proceed to Payment &rarr;
         </button>
       </div>
     </div>
@@ -1366,7 +1395,7 @@ const CONFIG = {
 </div>
 
 <!-- ================================================================
-     PAGE 3 â PAYMENT
+     PAGE 3 &mdash; PAYMENT
      ================================================================ -->
 <div class="page" id="page-payment">
   <div id="nav-payment"></div>
@@ -1394,11 +1423,11 @@ const CONFIG = {
         <div class="stripe-cta__sub">You'll be redirected to Stripe's encrypted checkout page. We never store your payment details. Your subscription begins after successful payment.</div>
         <button class="btn btn--primary btn--full btn--lg" id="btn-stripe" onclick="goToStripe()">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="1" y="6" width="22" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M1 10h22" stroke="currentColor" stroke-width="1.5"/></svg>
-          Pay Securely with Stripe â
+          Pay Securely with Stripe &rarr;
         </button>
         <div class="stripe-badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-          256-bit SSL encryption Â· Powered by Stripe
+          256-bit SSL encryption &middot; Powered by Stripe
         </div>
       </div>
     </div>
@@ -1406,7 +1435,7 @@ const CONFIG = {
   <div class="page-actions">
     <div class="page-actions__inner">
       <div class="page-actions__left">
-        <button class="btn btn--secondary" onclick="goToPage('agreement')">â Back</button>
+        <button class="btn btn--secondary" onclick="goToPage('agreement')">&larr; Back</button>
       </div>
       <div class="page-actions__right">
         <span style="font-size:12px;color:var(--color-text-3);">You'll return here after payment</span>
@@ -1416,7 +1445,7 @@ const CONFIG = {
 </div>
 
 <!-- ================================================================
-     PAGE 4 â META ACCESS
+     PAGE 4 &mdash; META ACCESS
      ================================================================ -->
 <div class="page" id="page-meta">
   <div id="nav-meta"></div>
@@ -1429,15 +1458,15 @@ const CONFIG = {
     <div class="meta-inner">
 
       <div class="access-needed" style="margin-bottom:24px;">
-        <div class="access-needed__title">ð Access we need from you</div>
+        <div class="access-needed__title">&#128273; Access we need from you</div>
         <div class="access-tags">
-          <span class="access-tag">ð Facebook Page â Editor</span>
-          <span class="access-tag">ð Ad Account â Advertiser</span>
-          <span class="access-tag">ð¸ Instagram Account â Connected</span>
-          <span class="access-tag">ð¢ Business Manager â Standard Access</span>
+          <span class="access-tag">&#128196; Facebook Page &mdash; Editor</span>
+          <span class="access-tag">&#128202; Ad Account &mdash; Advertiser</span>
+          <span class="access-tag">&#128248; Instagram Account &mdash; Connected</span>
+          <span class="access-tag">&#127970; Business Manager &mdash; Standard Access</span>
         </div>
         <div class="info-box" style="margin-top:14px;">
-          <span class="info-box__icon">â¹ï¸</span>
+          <span class="info-box__icon">&#8505;</span>
           <span>We'll use these permissions to manage your ad campaigns and page content. You can revoke access at any time from your Meta Business Settings.</span>
         </div>
       </div>
@@ -1449,16 +1478,16 @@ const CONFIG = {
           <div class="meta-step__body">
             <div class="meta-step__title">Open Meta Business Suite</div>
             <div class="meta-step__text">Go to <a href="https://business.facebook.com/settings" target="_blank" rel="noopener">business.facebook.com/settings</a> and make sure you're logged in as an admin of your Business account. If you have multiple businesses, select the correct one from the top-left dropdown.</div>
-            <div class="meta-step__img-placeholder"><span>ð¥ï¸</span><span>Screenshot placeholder â add your own image here</span></div>
+            <div class="meta-step__img-placeholder"><span>&#128421;</span><span>Screenshot placeholder &mdash; add your own image here</span></div>
           </div>
         </div>
 
         <div class="meta-step">
           <div class="meta-step__num">2</div>
           <div class="meta-step__body">
-            <div class="meta-step__title">Go to Users â Partners</div>
+            <div class="meta-step__title">Go to Users &rarr; Partners</div>
             <div class="meta-step__text">In the left sidebar, click <strong>Users</strong> then select <strong>Partners</strong>. This is where you can grant another business access to your assets.</div>
-            <div class="meta-step__img-placeholder"><span>ð·</span><span>Screenshot placeholder â add your own image here</span></div>
+            <div class="meta-step__img-placeholder"><span>&#128247;</span><span>Screenshot placeholder &mdash; add your own image here</span></div>
           </div>
         </div>
 
@@ -1474,7 +1503,7 @@ const CONFIG = {
               </div>
               <button class="btn btn--secondary btn--sm" onclick="copyMetaId()">Copy ID</button>
             </div>
-            <div class="meta-step__img-placeholder"><span>ð·</span><span>Screenshot placeholder â add your own image here</span></div>
+            <div class="meta-step__img-placeholder"><span>&#128247;</span><span>Screenshot placeholder &mdash; add your own image here</span></div>
           </div>
         </div>
 
@@ -1488,7 +1517,7 @@ const CONFIG = {
               <span class="access-tag">Your Ad Account (Advertiser role)</span>
               <span class="access-tag">Your Instagram Account</span>
             </div>
-            <div class="meta-step__img-placeholder"><span>ð·</span><span>Screenshot placeholder â add your own image here</span></div>
+            <div class="meta-step__img-placeholder"><span>&#128247;</span><span>Screenshot placeholder &mdash; add your own image here</span></div>
           </div>
         </div>
 
@@ -1496,9 +1525,9 @@ const CONFIG = {
           <div class="meta-step__num">5</div>
           <div class="meta-step__body">
             <div class="meta-step__title">Confirm & Notify Us</div>
-            <div class="meta-step__text">Click <strong>Save</strong> to apply the access. Once done, click the button below to let us know â we'll verify the connection and reach out within 24 hours to kick things off.</div>
+            <div class="meta-step__text">Click <strong>Save</strong> to apply the access. Once done, click the button below to let us know &mdash; we'll verify the connection and reach out within 24 hours to kick things off.</div>
             <div class="info-box">
-              <span class="info-box__icon">â</span>
+              <span class="info-box__icon">&#10003;</span>
               <span>Having trouble? Email us at <a id="meta-support-email" href="#" style="color:var(--color-success);"><!-- injected --></a> and we'll walk you through it on a quick call.</span>
             </div>
           </div>
@@ -1510,12 +1539,12 @@ const CONFIG = {
   <div class="page-actions">
     <div class="page-actions__inner">
       <div class="page-actions__left">
-        <span style="font-size:13px;color:var(--color-text-3);">â Payment confirmed</span>
+        <span style="font-size:13px;color:var(--color-text-3);">&#10003; Payment confirmed</span>
       </div>
       <div class="page-actions__right">
-        <button class="btn btn--secondary" onclick="goToPage('payment')">â Back</button>
+        <button class="btn btn--secondary" onclick="goToPage('payment')">&larr; Back</button>
         <button class="btn btn--primary" onclick="goToPage('thankyou')">
-          I've Granted Access â
+          I've Granted Access &rarr;
         </button>
       </div>
     </div>
@@ -1523,13 +1552,13 @@ const CONFIG = {
 </div>
 
 <!-- ================================================================
-     PAGE 5 â THANK YOU
+     PAGE 5 &mdash; THANK YOU
      ================================================================ -->
 <div class="page" id="page-thankyou">
   <div id="nav-thankyou"></div>
   <div class="thankyou">
     <div class="thankyou__inner">
-      <div class="success-ring">ð</div>
+      <div class="success-ring">&#127881;</div>
       <h1 class="thankyou__title">You're all set!</h1>
       <p class="thankyou__sub">Welcome to Tasti.io. Your onboarding is complete. Our team is already reviewing your account and will reach out within 24 hours to kick off your first campaign.</p>
 
@@ -1559,7 +1588,7 @@ const CONFIG = {
 
       <div style="margin-bottom:32px;">
         <a id="ty-support-link" href="#" class="btn btn--outline">
-          Contact us anytime â
+          Contact us anytime &rarr;
         </a>
       </div>
 
@@ -1574,7 +1603,7 @@ const CONFIG = {
 </div>
 
 <!-- ================================================================
-     JAVASCRIPT â App logic
+     JAVASCRIPT &mdash; App logic
      ================================================================ -->
 <script>
 // ââ State ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
@@ -1747,7 +1776,7 @@ function selectPackage(pkgId) {
   // Update agreement badge
   const badge = document.getElementById('selected-plan-badge');
   if (badge) {
-    badge.innerHTML = `<div class="alert" style="background:rgba(52,211,153,0.06);border-color:rgba(52,211,153,0.2);color:#6EE7B7;">â You selected: <strong>${pkg.name} â ${pkg.subtitle}</strong> (${pkg.price}/mo)</div>`;
+    badge.innerHTML = `<div class="alert" style="background:rgba(52,211,153,0.06);border-color:rgba(52,211,153,0.2);color:#6EE7B7;">&#10003; You selected: <strong>${pkg.name} â ${pkg.subtitle}</strong> (${pkg.price}/mo)</div>`;
   }
 
   // Update payment page
@@ -1799,14 +1828,12 @@ function proceedToPayment() {
   state.signerEmail    = email;
   state.signerBusiness = business;
   state.agreed         = true;
-
   // Save signature timestamp (for records)
   state.signatureTimestamp = new Date().toISOString();
-
   goToPage('payment');
 }
 
-// ââ Go to Stripe âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ââ Go to Stripe âââââââââââââââââââââââââââââââââââââââââââââââââââ
 function goToStripe() {
   const btn = document.getElementById('btn-stripe');
   const url = (state.selectedPkg && state.selectedPkg.stripeUrl)
